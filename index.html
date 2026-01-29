@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timezone Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏰ Timezone Converter</h1>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="dateInput">Date & Time:</label>
+                <input 
+                    type="datetime-local" 
+                    id="dateInput" 
+                    placeholder="Select a date and time"
+                >
+            </div>
+            
+            <div class="input-group">
+                <label for="sourceTimezone">From Timezone:</label>
+                <select id="sourceTimezone"></select>
+            </div>
+            
+            <button id="useCurrentTime" class="btn-secondary">Use Current Time</button>
+        </div>
+
+        <div class="target-timezones">
+            <h2>Convert To:</h2>
+            
+            <div class="timezone-input-group">
+                <input 
+                    type="text" 
+                    id="timezoneSearch" 
+                    placeholder="Search timezone..."
+                    class="timezone-search"
+                >
+                <button id="addTimezone" class="btn-primary">+ Add Timezone</button>
+            </div>
+
+            <div id="timezoneList" class="timezone-list">
+                <!-- Timezones will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
